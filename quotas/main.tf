@@ -25,16 +25,12 @@ resource "google_compute_instance" "vm" {
     initialize_params {
       image = "debian-cloud/debian-12"
       size  = 10
-      type  = "pd-balanced"
+      type  = "pd-standard"
     }
   }
 
   network_interface {
     network = "default"
-
-    access_config {
-      # Ephemeral public IP
-    }
   }
 
   tags = ["micro-vm"]
