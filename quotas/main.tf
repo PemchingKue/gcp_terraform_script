@@ -17,8 +17,8 @@ provider "google" {
 
 resource "google_compute_instance" "vm" {
   count        = 8
-  name         = "small-vm-${count.index + 1}"
-  machine_type = "e2-small"
+  name         = "micro-vm-${count.index + 1}"
+  machine_type = "e2-micro"
   zone         = var.zone
 
   boot_disk {
@@ -37,5 +37,5 @@ resource "google_compute_instance" "vm" {
     }
   }
 
-  tags = ["small-vm"]
+  tags = ["micro-vm"]
 }
