@@ -1,5 +1,5 @@
 {
-  "name": "Terraform GCP (Codespaces)",
+  "name": "Terraform + GCP + LFS (Codespaces)",
   "build": {
     "dockerfile": "Dockerfile"
   },
