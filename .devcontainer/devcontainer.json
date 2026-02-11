@@ -1,7 +1,13 @@
 {
-  "name": "Terraform + GCP + LFS (Codespaces)",
+  "name": "Terraform + GCP + Ruby + Docker (Codespaces)",
   "build": {
     "dockerfile": "Dockerfile"
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {},
+    "ghcr.io/devcontainers/features/ruby:1": {
+      "version": "3.2"
+    }
   },
   "customizations": {
     "vscode": {
