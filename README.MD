@@ -6,4 +6,4 @@ GCLOUD AUTH IN CODESPACE CLI
 ```sh
 gcloud auth login
 gcloud config set project pkplayground
-```sh
+```
