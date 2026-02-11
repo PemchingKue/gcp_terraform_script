@@ -31,5 +31,22 @@ RUN echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] http://packages.c
     | apt-key --keyring /usr/share/keyrings/cloud.google.gpg add - && \
     apt-get update && apt-get install -y google-cloud-cli
 
+# Install Ruby
+RUN apt-get update && apt-get install -y \
+    ruby-full \
+    build-essential \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install Bundler
+RUN gem install bundler
+
+# Configure bundler to install gems in user-writable location
+ENV BUNDLE_PATH=/usr/local/bundle
+ENV BUNDLE_BIN=/usr/local/bundle/bin
+ENV PATH="/usr/local/bundle/bin:${PATH}"
+
+RUN mkdir -p /usr/local/bundle \
+    && chown -R vscode:vscode /usr/local/bundle
+
 # Optional: clean up
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*

@@ -1,0 +1,16 @@
+source "https://rubygems.org"
+
+gem "sinatra", "~>3.2"
+gem "thin"
+
+group :test do
+  gem "rack-test"
+  gem "rest-client"
+  gem "rspec"
+  gem "rspec_junit_formatter"
+  gem "rspec-retry"
+  gem "rubysl-securerandom"
+end
+
+gem "puma", "~> 6.6"
+gem "rackup", "~> 1.0"
