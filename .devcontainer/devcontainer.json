@@ -4,7 +4,9 @@
     "dockerfile": "Dockerfile"
   },
   "features": {
-    "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {},
+    "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {
+      "version": "20.10.24"   // <-- Pin CLI to match host API 1.43
+    },
     "ghcr.io/devcontainers/features/ruby:1": {
       "version": "3.2"
     }
@@ -17,3 +19,4 @@
     }
   }
 }
+
