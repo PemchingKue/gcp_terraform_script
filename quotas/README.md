@@ -68,4 +68,5 @@ cd into specific folder and run commands below
 ```sh
 terraform init
 terraform apply
+terraform destroy
 ```
