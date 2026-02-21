@@ -3,7 +3,7 @@ check quotas folder readme for full setup
 
 ## STEPS FOR TERRAFORM SHORT HAND
 ```sh
-terrform init
+terraform init
 ```
 
 ```sh
@@ -19,9 +19,13 @@ gcloud iam service-accounts keys create ~/terraform-sa-key.json \
 export GOOGLE_APPLICATION_CREDENTIALS="$HOME/terraform-sa-key.json"
 ```
 
+```sh
+terraform apply
+```
+
 ## CHECKING AND SSH INTO VM
 
-find vm instance on gconsole and SSH into it \
+find vm instance on gconsole and SSH into it via new window\
 cd into var/www/html and see if index.html exist \
 run command below to check if apache service is running
 
@@ -33,12 +37,12 @@ sudo systemctl status apache2
 only do this if fire wall rules to open specific port on VM does not exist
 
 ```
-go to firewall in google cloud \
-click on create a fire wall rule \
-enter firewall name: webserver-allowed \
-add target tags: http-server and https-server \
-ip4 range 0.0.0.0/0 \
-allow TCP port 80 \
+go to firewall in google cloud
+click on create a fire wall rule
+enter firewall name: webserver-allowed
+add target tags: http-server and https-server
+ip4 range 0.0.0.0/0
+allow TCP port 80
 ```
 
 ## CHECK IF WEBSERVER VIA BROWSING
