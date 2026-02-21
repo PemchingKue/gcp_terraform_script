@@ -1,5 +1,5 @@
 .tfvars file hidden, you must provide your own values in a new tvars file \
-check quotas folder readme for full setup \
+check quotas folder readme for full setup
 
 ## STEPS FOR TERRAFORM SHORT HAND
 ```sh
@@ -23,14 +23,14 @@ export GOOGLE_APPLICATION_CREDENTIALS="$HOME/terraform-sa-key.json"
 
 find vm instance on gconsole and SSH into it \
 cd into var/www/html and see if index.html exist \
-run command below to check if apache service is running \
+run command below to check if apache service is running
 
 ```sh
 sudo systemctl status apache2
 ```
 
 ## OPEN FIREWALL RULES IN GOOGLE CLOUD
-only do this if fire wall rules to open specific port on VM does not exist \
+only do this if fire wall rules to open specific port on VM does not exist
 
 ```
 go to firewall in google cloud \

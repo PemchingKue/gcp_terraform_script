@@ -1,21 +1,21 @@
-simple terraform script to test quotas on gcp \
+simple terraform script to test quotas on gcp
 
 ## NOTES
 
 Terraform Dev Container features intermittently fail in GitHub Codespaces, even when referenced correctly, due to how Codespaces builds feature layers on shared infrastructure. \
 Do NOT use Dev Container features for Terraform in Codespaces \
-Install Terraform via Dockerfile instead \
+Install Terraform via Dockerfile instead
 
-.tfvars file that provides values to variables.tf are hidden, you must provide your own values \
+.tfvars file that provides values to variables.tf are hidden, you must provide your own values
 
 ## GCLOUD:
-install gcloud in container via dockerfile
+install gcloud in container via dockerfile \
 use gcloud service account to authenticate
 
 
 ## GCLOUD CLI
 
-#GCLOUD LOGIN (GIT CODESPACE)
+GCLOUD LOGIN (GIT CODESPACE)
 ```sh
 gcloud auth login --no-launch-browser
 ```
@@ -63,7 +63,7 @@ export GOOGLE_APPLICATION_CREDENTIALS="$HOME/terraform-sa-key.json"
 
 ## TERRFORM COMMANDS
 
-cd into specific folder and run commands below /
+cd into specific folder and run commands below
 
 ```sh
 terraform init
