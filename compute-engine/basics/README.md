@@ -1,7 +1,7 @@
 .tfvars file hidden, you must provide your own values in a new tvars file \
 check quotas folder readme for full setup \
 
-startup script for gcp
+startup script for apache VMs in gcp
 ```sh
 #! /bin/bash
 apt update
