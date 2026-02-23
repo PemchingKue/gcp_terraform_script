@@ -1,5 +1,15 @@
 .tfvars file hidden, you must provide your own values in a new tvars file \
-check quotas folder readme for full setup
+check quotas folder readme for full setup \
+
+startup script for gcp
+```sh
+#! /bin/bash
+apt update
+apt -y install apache2
+cat <<EOF > /var/www/html/index.html
+<html><body><p>Linux startup script added directly.</p></body></html>
+EOF
+```
 
 ## STEPS FOR TERRAFORM SHORT HAND
 ```sh
