@@ -57,7 +57,7 @@ allow TCP port 80
 
 ## CHECK IF WEBSERVER VIA BROWSER
 
-get external ip of VM on google cloud and enter it in the web browser, it should show the contents of index.html
+get external ip of VM on google cloud and enter it in the web browser (make sure URL is http), it should show the contents of index.html
 
 ## CLEAN UP VM
 
